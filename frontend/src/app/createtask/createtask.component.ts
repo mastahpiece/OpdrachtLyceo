@@ -1,8 +1,6 @@
 import { TidyService } from './../tidy.service';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-createtask',
@@ -17,7 +15,7 @@ export class CreatetaskComponent implements OnInit {
 
   projects: any;
 
-  constructor(private http: HttpClient, private service: TidyService, private toastCtrl: ToastController, private router: Router) { }
+  constructor(private service: TidyService, private toastCtrl: ToastController) { }
 
   ngOnInit() {
     this.getAllProjects();

@@ -1,8 +1,5 @@
 import { TidyService } from './../tidy.service';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-import { resolve } from 'q';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +12,12 @@ export class HomePage {
   projects: any;
   selectedProject: any;
 
-  constructor(private http: HttpClient, private service: TidyService, private router: Router) {}
+  constructor(private service: TidyService) {}
 
   ionViewWillEnter(){
     this.getTidies();
     this.getAllProjects();
+    this.selectedProject = null;
   }
 
   getTidies(){

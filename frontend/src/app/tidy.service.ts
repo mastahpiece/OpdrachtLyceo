@@ -61,6 +61,23 @@ export class TidyService {
         reject(error);
       })
     });
+  }
 
+  addProject(naam: string){
+    var that = this;
+    return new Promise(function(resolve,reject){
+      that.http.post("http://127.0.0.1:8000/api/project", {
+        naam_project: naam
+      }).subscribe( data => {
+        if (data['message'] == "project created successfully"){
+          resolve('success');
+        }
+        else {
+          reject('Something went wrong');
+        }
+      }, error => {
+        reject(error);
+      });
+    });
   }
 }

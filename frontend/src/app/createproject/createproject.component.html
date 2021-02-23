@@ -14,7 +14,7 @@
           <ion-label color="primary" position="floating">Naam project: </ion-label>
           <ion-input [(ngModel)]="projectName" required="true"></ion-input>
         </ion-item>
-            <ion-button [disabled]="projectName.length < 1" class="add-button" (click)="addTidy()" expand="block" shape="round">
+            <ion-button [disabled]="projectName.length < 1" class="add-button" (click)="addProject()" expand="block" shape="round">
               Maak project aan!
             </ion-button>
     </ion-content>
