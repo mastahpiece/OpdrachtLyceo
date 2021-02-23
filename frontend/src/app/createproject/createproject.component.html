@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+      
+      <ion-item>
+          <ion-label color="primary" position="floating">Naam project: </ion-label>
+          <ion-input [(ngModel)]="projectName" required="true"></ion-input>
+        </ion-item>
+            <ion-button [disabled]="projectName.length < 1" class="add-button" (click)="addTidy()" expand="block" shape="round">
+              Maak project aan!
+            </ion-button>
+    </ion-content>

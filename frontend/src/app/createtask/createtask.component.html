@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true">
+    <ion-text class="title" color="primary">
+        <h1>Maak een nieuwe Tidy!</h1>
+    </ion-text>
+    <ion-item>
+        <ion-label color="primary" position="floating">Naam: </ion-label>
+        <ion-input [(ngModel)]="tidyName" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" position="floating">Beschrijving: </ion-label>
+          <ion-input [(ngModel)]="tidyDescription" required="true"></ion-input>
+        </ion-item>
+        <ion-item class="project-selector">
+            <ion-label color="primary">Projects</ion-label>
+            <ion-select [(ngModel)]="selectedProject" required="true" color="primary" placeholder="Selecteer project">
+              <ion-select-option *ngFor="let p of projects" [value]="p.id">{{p.naam_project}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-button class="add-button" (click)="addTidy()" expand="block" shape="round">
+            Voeg Tidy toe!
+          </ion-button>
+  </ion-content>

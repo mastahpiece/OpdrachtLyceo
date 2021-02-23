@@ -1,0 +1,51 @@
+.toolbar-title {
+  text-align: center;
+}
+
+.add-button {
+  margin: 20px;
+}
+
+.detail-page-button {
+  height: 100%;
+  --box-shadow: 0;
+}
+
+ion-content {
+  --background: #f9f9f9;
+
+  .project-selector {
+    margin: 20px;
+  }
+
+  .fab-text {
+    text-align: center;
+    font-size: 13px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 9px;
+    box-shadow: 1px 1px 3px #80808063;
+  }
+
+  ion-card {
+    margin: 20px;
+
+    ion-grid {
+      width: 100%;
+
+      .task-description {
+        color: grey;
+        margin: 10px 0px 10px 0px;
+      }
+    }
+  }
+}
+
+.task-name {
+  padding: 10px 10px 10px 0px;
+  font-weight: bold;
+}
+
+ion-list {
+  padding: 0;
+}

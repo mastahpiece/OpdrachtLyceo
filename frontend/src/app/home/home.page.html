@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-button>
+            <ion-icon slot="icon-only" name="bulb-outline"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon slot="icon-only" name="exit-outline"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+    <ion-title class="toolbar-title">
+      Shaf's Tidy list
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+  <ion-item class="project-selector">
+      <ion-label>Projects</ion-label>
+      <ion-select [(ngModel)]="selectedProject" (ionChange)="doStuff($value)" placeholder="Kies project">
+          <ion-select-option [value]="0">Geen geselecteerd</ion-select-option>
+        <ion-select-option *ngFor="let p of projects" [value]="p.id">{{p.naam_project}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  <ion-card>
+      <ion-list>
+          <ion-item *ngFor="let item of tidies">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="10.5">
+                    <ion-title class="task-name"> {{item.naam}}</ion-title>
+                    <ion-label *ngIf="item.beschrijving" class="task-description"> {{item.beschrijving}}</ion-label>
+                    <ion-chip *ngIf="!item.beschrijving" color="danger">{{item.naam_project}}</ion-chip>
+                </ion-col>
+                <ion-col size="1.5">
+                    <ion-button class="detail-page-button" color="primary-contrast">
+                        <ion-icon color="primary" slot="icon-only" name="chevron-forward-outline"></ion-icon>
+                      </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-text routerLink="/create-project" class="fab-text" color="primary">Nieuw project!</ion-text>
+      </ion-fab-list>
+      <ion-fab-list side="start">
+        <ion-text routerLink="/create-task" class="fab-text" color="primary">Nieuwe Tidy!</ion-text>
+      </ion-fab-list>
+    </ion-fab>
+</ion-content>
