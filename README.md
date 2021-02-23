@@ -7,13 +7,16 @@
 3. Laravel -> 4.1.0
 
 ## Overige info:
-1. Keuze voor database: SQLITE (meegenomen in de repo)
+1. Keuze van database is Sqlite. Makkelijkste keuze voor een database voor een demo als deze.
 
 ## Installatie en opstarten
 1. Clone deze repo
-2. Navigeer in de terminal naar de folder 'backend' en voer in commando: `php artisan serve` voor het opstarten van de API. 
-3. Navigeer in de terminal naar de folder 'frontend' en voer in commando: `npm install` voor het installeren van de nodige dependencies.
-4. Navigeer in de terminal. naar de folder 'frontend' en start de front-end applicatie op met `ionic serve`. 
+2. Navigeer in de terminal naar de folder 'backend' en voer in commando: `php artisan migrate` om alle migraties te runnen en zo de tabellen te creeren voor de API.
+3. Navigeer in de terminal naar de folder 'backend' en voer in commando: `php artisan serve` voor het opstarten van de API. 
+ * De API runt by default op `http://127.0.0.1:8000` en alle API calls worden ook gemaakt naar deze URL.
+4. Navigeer in de terminal naar de folder 'frontend' en voer in commando: `npm install` voor het installeren van de nodige dependencies.
+5. Navigeer in de terminal. naar de folder 'frontend' en start de front-end applicatie op met `ionic serve`. 
+ * De ionic app runt by default op `http://localhost:8100/`
 
 
 
