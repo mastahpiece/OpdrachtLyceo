@@ -36,7 +36,6 @@ export class CreatetaskComponent implements OnInit {
   addTidy(){
     this.service.addTidy(this.tidyName,this.tidyDescription,this.selectedProject).then(
       data => {
-        console.log(data);
         if (data == 'success'){
           this.tidyName = "";
           this.tidyDescription = "";
