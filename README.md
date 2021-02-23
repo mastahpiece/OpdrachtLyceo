@@ -43,7 +43,7 @@
     *  [ion-toast](https://ionicframework.com/docs/api/toast) gebruikt voor weergeven success of error. (Extra)
 
 ## Functionaliteit & motivatie (BACK-END):
-### 1. Data ophalen & filteren standaard met join zodat met 1 API call alle informatie wordt opgehaald die nodig is voor het UI-element.
+### 1. Data ophalen & filteren standaard met een join tussen de tabellen `projects` en `tidies` zodat met 1 API call alle informatie wordt opgehaald die nodig is voor de front-end.
   * Motivatie: De data zou ook kunnen worden gefilterd in de front-end maar dit is niet ideaal in geval van schaalbaarheid (good practice)
 
 
