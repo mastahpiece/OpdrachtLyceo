@@ -6,6 +6,15 @@
 2. Ionic -> 5.5.2
 3. Laravel -> 4.1.0
 
+## Overige info:
+1. Keuze voor database: SQLITE (meegenomen in de repo)
+
+## Installatie en opstarten
+1. Clone deze repo
+2. Navigeer in de terminal naar de folder 'backend' en voer in commando: `php artisan serve` voor het opstarten van de API. 
+3. Navigeer in de terminal naar de folder 'frontend' en voer in commando: `npm install` voor het installeren van de nodige dependencies.
+4. Navigeer in de terminal. naar de folder 'frontend' en start de front-end applicatie op met `ionic serve`. 
+
 
 
 ## Functionaliteit & motivatie (FRONT-END):
@@ -36,4 +45,4 @@
 
 
 ### Known 'issues':
-* Met de huidige dropdown voor selecteren van project
+* Met de huidige dropdown voor selecteren van project op de Homepagina is het niet direct duidelijk dat je moet scrollen voor het zien van alle opties.
