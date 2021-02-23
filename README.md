@@ -7,7 +7,7 @@
 3. Laravel -> 4.1.0
 
 ## Overige info:
-1. Keuze van database is Sqlite. Makkelijkste keuze voor een database voor een demo als deze.
+1. Keuze van database is Sqlite.
 
 ## Installatie en opstarten
 1. Clone deze repo
@@ -17,7 +17,7 @@
 4. Navigeer in de terminal naar de folder 'frontend' en voer in commando: `npm install` voor het installeren van de nodige dependencies.
 5. Navigeer in de terminal. naar de folder 'frontend' en start de front-end applicatie op met `ionic serve`. 
  * De ionic app runt by default op `http://localhost:8100/`
-6. BELANGRIJK!: Maak eerst een project-item aan voordat je een Tidy/taak aanmaakt. Er is namelijk een project-item vereist om een taak/tidy te creeeren. Zie Hoofdstuk (FRONT-END) -> 4. Toevoegen van taak of project
+6. BELANGRIJK!: [Maak eerst een project-item aan](#4-toevoegen-van-taak-of-project) voordat je een Tidy/taak aanmaakt. Er is namelijk een project-item vereist om een taak/tidy te creeeren. Zie Hoofdstuk (FRONT-END) -> 4. Toevoegen van taak of project
 
 ## Functionaliteit & motivatie (FRONT-END):
 ### 1. Tonen van taken (Tidy's). Per taak wordt getoond Taaknaam en Project of Beschrijving.
